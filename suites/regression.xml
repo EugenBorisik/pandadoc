@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI Suite"
+       parallel="tests"
+       thread-count="3"
+       verbose="1"
+       configfailurepolicy="continue">
+    <test name="[UI] Create contact">
+        <classes>
+            <class name="org.example.pandadoc.ui.ContactTest"/>
+        </classes>
+    </test>
+    <test name="[API] Create document">
+        <classes>
+            <class name="org.example.pandadoc.api.DocumentTest"/>
+        </classes>
+    </test>
+    <test name="[API+UI] Send document">
+        <classes>
+            <class name="org.example.pandadoc.mix.DocumentTest"/>
+        </classes>
+    </test>
+</suite>
